@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply rounded bg-slate-200 px-5 py-2;
+  }
+
+  .btn-success {
+    @apply bg-green-500 text-white;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white;
+  }
+
+  .field-container {
+    @apply flex;
+  }
+
+  .field-container > * {
+    @apply flex-1 border rounded-md p-1;
+  }
+
+  .place {
+    @apply flex-shrink-0 snap-center w-2/3 lg:w-1/3;
+  }
+
+  .place:first-child {
+    @apply snap-start;
+  }
+
+  .place:last-child {
+    @apply snap-end;
+  }
+
+  .place .selected {
+    outline: 1px solid red;
+  }
+}
